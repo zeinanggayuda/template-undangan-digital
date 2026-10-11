@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- UBAH: Judul Tab Browser -->
+    <title>The Wedding of [Nama Pria] & [Nama Wanita]</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- 1. HALAMAN SAMPUL (COVER) -->
+    <section id="cover" class="cover-section">
+        <div class="cover-content">
+            <p>The Wedding of</p>
+            <!-- UBAH: Nama Panggilan Pasangan -->
+            <h1>[PRIA] & [WANITA]</h1>
+            
+            <div class="guest-box">
+                <p>Kepada Yth. Bpk/Ibu/Saudara/i,</p>
+                <h3 id="guest-name">Tamu Undangan</h3>
+            </div>
+
+            <!-- UBAH: Teks Kalimat Undangan -->
+            <p class="invite-text">Tanpa mengurangi rasa hormat, kami mengundang Anda untuk hadir di hari bahagia kami.</p>
+            
+            <button id="open-btn" class="btn-buka">
+                <i class="fa-solid fa-envelope-open"></i> Buka Undangan
+            </button>
+        </div>
+    </section>
+
+    <!-- 2. ISI UNDANGAN -->
+    <main id="main-content" class="main-content">
+        
+        <!-- Pembuka -->
+        <section class="intro-section">
+            <p class="arabic">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا</p>
+            <p class="verse-desc">"Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepada-Nya..."</p>
+            <p class="surah">(QS. Ar-Rum: 21)</p>
+        </section>
+
+        <!-- Mempelai -->
+        <section class="couple-section">
+            <h2>Mempelai Bahagia</h2>
+            
+            <div class="couple-card">
+                <!-- UBAH: Foto Mempelai Pria (Rekomendasi rasio 1:1) -->
+                <img src="img/cowok-placeholder.jpg" alt="Mempelai Pria">
+                <!-- UBAH: Nama Lengkap Pria -->
+                <h3>[Nama Lengkap Pria]</h3>
+                <p>Putra dari Bpk. [Nama Bapak] & Ibu [Nama Ibu]</p>
+            </div>
+
+            <span class="tanda-and">&</span>
+
+            <div class="couple-card">
+                <!-- UBAH: Foto Mempelai Wanita (Rekomendasi rasio 1:1) -->
+                <img src="img/cewek-placeholder.jpg" alt="Mempelai Wanita">
+                <!-- UBAH: Nama Lengkap Wanita -->
+                <h3>[Nama Lengkap Wanita]</h3>
+                <p>Putri dari Bpk. [Nama Bapak] & Ibu [Nama Ibu]</p>
+            </div>
+        </section>
+
+        <!-- Acara -->
+        <section class="event-section">
+            <h2>Waktu & Tempat</h2>
+            
+            <div class="event-grid">
+                <div class="event-box">
+                    <h3>Akad Nikah</h3>
+                    <!-- UBAH: Detail Akad -->
+                    <p><i class="fa-solid fa-calendar-days"></i> Sabtu, 01 Januari 2030</p>
+                    <p><i class="fa-solid fa-clock"></i> 08.00 WIB - Selesai</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Masjid Jami Al-Huda, Jakarta</p>
+                    <!-- UBAH: Link Google Maps -->
+                    <a href="https://goo.gl/maps/contohlink" target="_blank" class="btn-map"><i class="fa-solid fa-map"></i> Buka Google Maps</a>
+                </div>
+
+                <div class="event-box">
+                    <h3>Resepsi</h3>
+                    <!-- UBAH: Detail Resepsi -->
+                    <p><i class="fa-solid fa-calendar-days"></i> Sabtu, 01 Januari 2030</p>
+                    <p><i class="fa-solid fa-clock"></i> 11.00 WIB - Selesai</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Gedung Serbaguna, Jakarta</p>
+                    <!-- UBAH: Link Google Maps -->
+                    <a href="https://goo.gl/maps/contohlink" target="_blank" class="btn-map"><i class="fa-solid fa-map"></i> Buka Google Maps</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Countdown Timer -->
+        <section class="countdown-section">
+            <h2>Menuju Hari Bahagia</h2>
+            <div class="countdown" id="countdown">
+                <div class="time-box">
+                    <span id="hari">00</span>
+                    <p>Hari</p>
+                </div>
+                <div class="time-box">
+                    <span id="jam">00</span>
+                    <p>Jam</p>
+                </div>
+                <div class="time-box">
+                    <span id="menit">00</span>
+                    <p>Menit</p>
+                </div>
+                <div class="time-box">
+                    <span id="detik">00</span>
+                    <p>Detik</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- RSVP & Ucapan -->
+        <section class="rsvp-section">
+            <h2>RSVP & Ucapan</h2>
+            <!-- UBAH: Arahkan action ke WhatsApp API atau Google Forms milik pembeli -->
+            <form class="rsvp-form" action="#" method="POST">
+                <input type="text" placeholder="Nama Anda" required>
+                <select required>
+                    <option value="" disabled selected>Konfirmasi Kehadiran</option>
+                    <option value="Hadir">Ya, Saya akan hadir</option>
+                    <option value="Tidak Hadir">Maaf, saya tidak bisa hadir</option>
+                </select>
+                <textarea rows="4" placeholder="Berikan ucapan & doa restu..." required></textarea>
+                <button type="submit" class="btn-buka">Kirim Ucapan</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Tombol Musik Melayang -->
+    <div id="music-control" class="music-control hide">
+        <i class="fa-solid fa-music" id="music-icon"></i>
+    </div>
+
+    <!-- Audio (Hidden) -->
+    <audio id="wedding-song" loop>
+        <!-- UBAH: File musik (Pastikan file berada di folder img/audio) -->
+        <source src="audio/backsound.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
